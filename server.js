@@ -42,6 +42,6 @@ const postList = [
     }
 ]
 
-app.get('/posts', (req, res) => {
+app.get('/bacheca', (req, res) => {
     res.json(postList);
 });
