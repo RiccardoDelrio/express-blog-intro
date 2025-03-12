@@ -10,12 +10,38 @@ app.get('/', (req, res) => {
 });
 app.use(express.static('public'));// Risorse esterne
 
-
 const postList = [
     {
-        titolo: 'Post 1',
+        titolo: 'Ciambellone',
         contenuto: 'Contenuto del post 1',
-        img: '',
-        tags: ['tag 1', 'tag 2', 'tag 3']
+        img: '/img/ciambellone.jpeg',
+        tags: ['dolce', 'torta', 'dessert']
+    },
+    {
+        titolo: 'cracker barbabietola',
+        contenuto: 'Contenuto del post 1',
+        img: '/img/cracker_barbabietola.jpeg',
+        tags: ['cracker', 'barbabietola', 'snack']
+    },
+    {
+        titolo: 'Pane fritto dolce',
+        contenuto: 'Contenuto del post 1',
+        img: '/img/pane_fritto_dolce.jpeg',
+        tags: ['dolce', 'pane', 'fritto']
+    },
+    {
+        titolo: 'pasta  barbabietola',
+        contenuto: 'Contenuto del post 1',
+        img: '/img/pasta_barbabietola.jpeg',
+        tags: ['pasta', 'barbabietola', 'primo']
+    }, {
+        titolo: 'Torta paesana',
+        contenuto: 'Contenuto del post 1',
+        img: '/img/torta_paesana.jpeg',
+        tags: ['dolce', 'torta', 'dessert']
     }
 ]
+
+app.get('/posts', (req, res) => {
+    res.json(postList);
+});
