@@ -45,3 +45,4 @@ const postList = [
 app.get('/bacheca', (req, res) => {
     res.json(postList);
 });
+
